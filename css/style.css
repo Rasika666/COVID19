@@ -85,3 +85,16 @@ main{
     height: 20px;
     background-color: #333;
 }
+
+
+footer {
+    padding: 2rem 1rem;
+    text-align: center;
+    margin: auto;
+    color:#333;
+  }
+  
+  footer h3 {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
