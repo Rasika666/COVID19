@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>#COVID19SL</title>
+</head>
+<body>
+    <main>
+        <div id="header">
+            <p>COVID-19 Real Time Data Dashboard</p>    
+        </div>
+    
+        <div class="local-data">
+            <h2>Local Data(SL)</h2>
+            <div class="box">
+                <div class="data-box">
+                    <div class="local-new-cases number-box">0</div>
+                    <div class="title">Local New Cases</div>
+                </div>
+    
+                <div class="data-box">
+                    <div class="local-total-cases number-box">0</div>
+                    <div class="title">Local Total Cases</div>
+                </div>
+    
+                <div class="data-box">
+                    <div class="local-new-death number-box">0</div>
+                    <div class="title">Local New Death</div>
+                </div>
+    
+                <div class="data-box">
+                    <div class="local-total-death number-box">0</div>
+                    <div class="title">Local Total Death</div>
+                </div>
+    
+                <div class="data-box">
+                    <div class="local-recover number-box">0</div>
+                    <div class="title">Local Recover</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="globle-data">
+            <h2>Globle Data</h2>
+            <div class="box">
+                <div class="data-box">
+                    <div class="globle-new-cases number-box">0</div>
+                    <div class="title">Globle New Cases</div>
+                </div>
+    
+                <div class="data-box">
+                    <div class="globle-total-cases number-box">0</div>
+                    <div class="title">Globle Total Cases</div>
+                </div>
+    
+                <div class="data-box">
+                    <div class="globle-new-death number-box">0</div>
+                    <div class="title">Globle New Death</div>
+                </div>
+    
+                <div class="data-box">
+                    <div class="globle-total-death number-box">0</div>
+                    <div class="title">Globle Total Death</div>
+                </div>
+    
+                <div class="data-box">
+                    <div class="globle-recover number-box">0</div>
+                    <div class="title">Globle recover</div>
+                </div>
+            </div>
+    
+        </div>
+
+    </main>
+
+    <!-- Include the JQuery library -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+    //When the page has loaded.
+    $( document ).ready(function(){
+        //Perform Ajax request.
+        $.ajax({
+            url: 'https://www.healthpromo.gov.lk/api/get-current-statistical',
+            type: 'get',
+            success: function(data){
+                $('div.local-new-cases').text(data.data.local_new_cases);
+                $('div.local-total-cases').text(data.data.local_total_cases);
+                $('div.local-new-death').text(data.data.local_deaths);
+                $('div.local-total-death').text(data.data.local_deaths);
+                $('div.local-recover').text(data.data.local_recovered);
+
+                $('div.globle-new-cases').text(data.data.global_new_cases);
+                $('div.globle-total-cases').text(data.data.global_total_cases);
+                $('div.globle-new-death').text(data.data.global_new_deaths);
+                $('div.globle-total-death').text(data.data.global_deaths);
+                $('div.globle-recover').text(data.data.global_recovered);
+
+                console.log(data.data);
+                
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                var errorMsg = 'Ajax request failed: ' + xhr.responseText;
+                console.log(errorMsg)
+              }
+        });
+    });
+    </script>
+    
+
+</body>
+</html>
