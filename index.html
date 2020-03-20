@@ -46,12 +46,12 @@
             <h2>Globle Data</h2>
             <div class="box">
                 <div class="data-box">
-                    <div class="globle-new-cases number-box">0</div>
+                    <div class="globle-new-cases number-box" id=globle-new-cases>0</div>
                     <div class="title">Globle New Cases</div>
                 </div>
     
                 <div class="data-box">
-                    <div class="globle-total-cases number-box">0</div>
+                    <div class="globle-total-cases number-box" id=globle-total-cases>0</div>
                     <div class="title">Globle Total Cases</div>
                 </div>
     
@@ -76,7 +76,8 @@
     </main>
 
     <!-- Include the JQuery library -->
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/countUp.min.js"></script>
     <script>
     //When the page has loaded.
     $( document ).ready(function(){
@@ -85,6 +86,15 @@
             url: 'https://www.healthpromo.gov.lk/api/get-current-statistical',
             type: 'get',
             success: function(data){
+                var options = {
+                  useEasing : true, 
+                  useGrouping : true, 
+                  separator : ',', 
+                  decimal : '.', 
+                  prefix : '', 
+                  suffix : '' 
+                };
+
                 $('div.local-new-cases').text(data.data.local_new_cases);
                 $('div.local-total-cases').text(data.data.local_total_cases);
                 $('div.local-new-death').text(data.data.local_deaths);
@@ -96,8 +106,14 @@
                 $('div.globle-new-death').text(data.data.global_new_deaths);
                 $('div.globle-total-death').text(data.data.global_deaths);
                 $('div.globle-recover').text(data.data.global_recovered);
+                
+                var statistics = $(".number-box");
 
-                console.log(data.data);
+                statistics.each(function(index){
+                    var value = $(statistics[index]).html();
+                    var demo = new CountUp(statistics[index], 0, value, 0, 5, options);
+                    demo.start();
+                });
                 
             },
             error: function (xhr, ajaxOptions, thrownError) {
@@ -105,7 +121,20 @@
                 console.log(errorMsg)
               }
         });
+        
+
     });
+
+    // var options = {
+    //   useEasing : true, 
+    //   useGrouping : true, 
+    //   separator : ',', 
+    //   decimal : '.', 
+    //   prefix : '', 
+    //   suffix : '' 
+    // };
+    // var demo = new CountUp("globle-new-cases", 0, 4200, 0, 10, options);
+    // demo.start();
     </script>
     
 
