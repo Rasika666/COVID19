@@ -99,3 +99,26 @@ footer {
     font-size: 3rem;
     margin-bottom: 0;
   }
+
+  @media only screen and (max-width: 767px){
+    .box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .data-box{
+        width: 100%;
+        margin: 5px 20px;
+        background-color: #333;
+        color: #fff;
+        box-shadow: 5px 0px 5px rgba(0,0, 0, 0.1), -5px 0px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    main{
+        max-width: 767px;
+        margin: auto; 
+        background: #fff;
+        box-shadow: 30px 0px 40px rgba(0,0, 0, 0.2), -30px 0px 40px rgba(0, 0, 0, 0.2);
+    }
+  }
