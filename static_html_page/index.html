@@ -51,7 +51,7 @@
             <h2>Global Data</h2>
             <div class="box">
                 <div class="data-box">
-                    <div class="globle-new-cases number-box" id=globle-new-cases>0</div>
+                    <div class="globle-new-cases number-box" id=globle-new-cases></div>
                     <div class="title">Global New Cases</div>
                     <div class="box-bottom"></div>
                 </div>
@@ -112,7 +112,7 @@
                   suffix : '' 
                 };
 
-                $('div.local-new-cases').text(data.data.local_new_cases);
+                //$('div.local-new-cases').text(data.data.local_new_cases);
                 $('div.local-total-cases').text(data.data.local_total_cases);
                 $('div.local-new-death').text(data.data.local_deaths);
                 $('div.local-total-death').text(data.data.local_deaths);
