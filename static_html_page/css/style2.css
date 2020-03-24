@@ -52,7 +52,7 @@ main{
 .container{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-around;
     padding-bottom: 2rem;
 }
 
@@ -124,6 +124,40 @@ hr {
     background-color: #fff; 
     width: 90%;
     margin: auto;
+}
+
+@media only screen and (max-width: 1024px) {
+    .left-wrapper {
+        width: 40vw;
+    }
+
+    .data-box{
+        width: 20vw;
+        margin: 3px 20px;
+        
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .container{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .left-wrapper {
+        width: 100vw;
+    }
+
+    .data-box{
+        width: 40vw;
+        margin: 3px 20px;
+        
+    }
+
+    .right-wrapper {
+        width: 100vw;
+        height: 80vh;
+    }
 }
 
 /* new stuff ends here */
