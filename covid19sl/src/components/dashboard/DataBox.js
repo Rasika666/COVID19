@@ -1,34 +1,36 @@
 import React, { Component } from 'react';
-import {useCountUp} from 'react-countup';
+import CountUp from 'react-countup';
 
-const DataBox = props => {
-    let {count, title} = props;
-    //const c = props && props.count
 
-    const { countUp } = useCountUp({ start: 0, end: count ,duration: 5 });
+class DataBox extends Component {
 
-    // <CountUp start={0} end={count} delay={5}>
-    //     {({ countUpRef }) => (
-    //         <div className="data-box">
-    //             <div className="local-new-cases number-box">{countUpRef}</div>
-    //             <div className="title">{title}</div>
-    //             <div className="box-bottom"></div>
-    //         </div>
-    //     )}
-    // </CountUp>
+    constructor(props) {
+        super(props)
     
-    return(
-        <div className="data-box">
-            <div className="local-new-cases number-box">{count}</div> {/* sachin aiye meka countUp varible eka dammama wada krnne nathiwa yanawa
-            but userCountup object eke end ekata props ekk pass kranne nathuwa number ekk damma wada*/ }
-            <div className="title">{title}</div>
-            <div className="box-bottom"></div>
-        </div>
-    )
+        this.state = {
+             count:0
+        }
+    }
+
+    static getDerivedStateFromProps(props, state){
+        
+        return {
+            count: props.count
+        }
+    }
     
-    
-    
+    render() {
+
+        return (
+            <div className="data-box">
+                <div className="local-new-cases number-box">{<CountUp end={this.state.count} duration={5}/>}</div> 
+                <div className="title">{this.props.title}</div>
+                <div className="box-bottom"></div>
+             </div>
+        )
+    }
 }
+
 
 DataBox.defaultProps = {
     count : 0

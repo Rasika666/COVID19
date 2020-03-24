@@ -9,13 +9,12 @@ import { Header, Footer } from '../common/common';
 
 
 class Dashboard extends Component {
-    
 
+    
     componentDidMount(){
         this.props.getCOVID_Data();
     }
 
-    
     render() {
 
         const local_new_cases = this.props.covid_data.data && this.props.covid_data.data.local_new_cases;
@@ -31,9 +30,6 @@ class Dashboard extends Component {
 
         const last_update = this.props.covid_data.data && this.props.covid_data.data.update_date_time;
 
-        
-
-        
         
 
             return (
@@ -81,7 +77,7 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
-    covid_data: PropTypes.object.isRequired,
+    // covid_data: PropTypes.object.isRequired,
     getCOVID_Data: PropTypes.func.isRequired
     
 };

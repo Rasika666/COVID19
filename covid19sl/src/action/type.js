@@ -1,1 +1,3 @@
 export const GET_COVID_HPB = "GET_COVID_HPB";
+export const GET_SRILANKA_RAPID = "GET_SRILANKA_RAPID";
+export const GET_WORLD_RAPID = "GET_WORLD_RAPID";
