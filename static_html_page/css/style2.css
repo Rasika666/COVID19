@@ -30,14 +30,15 @@ h2{
 
 main{
     max-width: 1024px;
+    /* height: 40vw; */
     margin: auto; 
     background: #fff;
-    box-shadow: 30px 0px 40px rgba(0,0, 0, 0.2), -30px 0px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 30px 0px 40px rgba(0,0, 0, 0.2), -30px 0px 40px rgba(0, 0, 0, 0.2); 
 }
 
 #header{
     background-color: #333;
-
+    width: 100%;
 }
 
 #header p{
@@ -47,51 +48,85 @@ main{
     padding: 2rem 0;
 }
 
-.local-data{
-    /* background-color:red; */
-}
-
-.globle-data{
-    margin-top: 80px;
-    padding-bottom: 50px;
-}
-
-.box{
+/* new  stuff here */
+.container{
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-bottom: 2rem;
+}
+
+.left-wrapper {
+    width: 25vw;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+    /* background-color:green; */
+    margin-top: 1rem;
+    
+}
+
+.left-boxs,
+.right-boxs{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.right-wrapper {
+    width: 40vw;
+    margin-top: 1rem;
+    /* background-color: green; */
+    box-shadow: 5px 0px 5px rgba(0,0, 0, 0.1), -5px 0px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    
 }
 
 .data-box{
-    width: 20%;
-    margin: 5px 20px;
+    width: 10vw;
+    margin: 3px 20px;
     background-color: #333;
     color: #fff;
     box-shadow: 5px 0px 5px rgba(0,0, 0, 0.1), -5px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
 .number-box{
-    padding: 3rem 0;
+    padding: 1.5rem 0;
     text-align: center;
     font-size: 2rem;
     z-index: -1;
 }
-
 .title{
-    background-color: #eee;
+    background-color: #fff;
     color: #333;
     font-weight: 600;
     text-align: center;
     padding: 1rem 0;
     padding-bottom: 20px;
     z-index: 3;
-    
 }
 
-.box-bottom{
-    height: 20px;
+.basic-info{
+    box-shadow: 5px 0px 5px rgba(0,0, 0, 0.1), -5px 0px 5px rgba(0, 0, 0, 0.1);
     background-color: #333;
+    margin: 1rem;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    line-height: 2rem;
 }
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #fff; 
+    width: 90%;
+    margin: auto;
+}
+
+/* new stuff ends here */
 
 
 footer {
@@ -104,22 +139,4 @@ footer {
   footer h3 {
     font-size: 3rem;
     margin-bottom: 0;
-  }
-  
-
-  @media only screen and (max-width: 767px){
-      
-    .box{
-        flex-direction: column;  
-    }
-
-    .data-box{
-        width: 100%;
-        margin: 5px 0;
-       
-    }
-
-    main{
-        width: 100%;
-    }
   }

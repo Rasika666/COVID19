@@ -5,6 +5,7 @@ import {connect} from 'react-redux';
 import {getCOVID_Data} from '../../action/dashboard';
 import PropTypes from "prop-types";
 import { Header, Footer } from '../common/common';
+import { Link } from 'react-router-dom';
 
 
 
@@ -34,9 +35,10 @@ class Dashboard extends Component {
 
             return (
                 <div>
+                    <Header/>
                     <main>
                 
-                    <Header/>
+                    
 
                     <div className="timer-wapper">
                         <p style={{color:'red', fontSize:'1.2rem'}}>Last update</p>
@@ -51,6 +53,10 @@ class Dashboard extends Component {
                             <DataBox count={local_deaths} title="Sri Lanka Deaths"/>
                             <DataBox count={local_recovered} title="Sri Lanka Recovered"/>  
                         </div>
+                    </div>
+
+                    <div className="btn-long">
+                        <Link className="link" to="/more-SLdata-covid19">More COVID-19 Information in Sri Lanka</Link>
                     </div>
 
                     <div className="globle-data">

@@ -6,6 +6,7 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import store from './Store';
 
 import Dashboard from './components/dashboard/Dashboard';
+import SLDataDashborad from './components/SLData/SLDataDashborad'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
 			<div className="App">
 				<Switch>
                   <Route exact path="/" component={Dashboard} />
+				  <Route exact path="/more-SLdata-covid19" component={SLDataDashborad} />
                 </Switch>
 			</div>
 			</>

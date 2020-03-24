@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style2.css">
+    <title>#COVID19SL</title>
+</head>
+<body>
+    <div id="header">
+        <p>COVID-19 Real Time Data Dashboard</p>    
+    </div>
+    <main>
+        
+        <div class="container">
+            <div class="left-wrapper">
+                <div class="left-boxs">
+                    <div class="data-box">
+                        <div class="local-new-cases number-box">0</div>
+                        <div class="title">Local New Cases</div>
+                        <div class="box-bottom"></div>
+                    </div>
+                    <div class="data-box">
+                        <div class="local-new-cases number-box">0</div>
+                        <div class="title">Local New Cases</div>
+                        <div class="box-bottom"></div>
+                    </div>
+                    <div class="data-box">
+                        <div class="local-new-cases number-box">0</div>
+                        <div class="title">Local New Cases</div>
+                        <div class="box-bottom"></div>
+                    </div>
+                    <div class="data-box">
+                        <div class="local-new-cases number-box">0</div>
+                        <div class="title">Local New Cases</div>
+                        <div class="box-bottom"></div>
+                    </div>
+                </div>
+                <div class="right-boxs">
+                    <div class="data-box">
+                        <div class="local-new-cases number-box">0</div>
+                        <div class="title">Local New Cases</div>
+                        <div class="box-bottom"></div>
+                    </div>
+                    <div class="data-box">
+                        <div class="local-new-cases number-box">0</div>
+                        <div class="title">Local New Cases</div>
+                        <div class="box-bottom"></div>
+                    </div>
+                    <div class="data-box">
+                        <div class="local-new-cases number-box">0</div>
+                        <div class="title">Local New Cases</div>
+                        <div class="box-bottom"></div>
+                    </div>
+                    <div class="data-box">
+                        <div class="local-new-cases number-box">0</div>
+                        <div class="title">Local New Cases</div>
+                        <div class="box-bottom"></div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="right-wrapper">
+                <div class="basic-info">
+                    <h2>Basic statistics</h2> <hr>
+                    <p>Country: Sri Lanka</p>
+                    <p>latest update: date</p>
+                </div>
+                <div class="graph">
+                    <canvas id="myChart" width="400" height="280"></canvas>
+                </div>
+            </div>
+        </div>
+    
+        
+
+
+    </main>
+
+    <footer>
+        <h3>Get In Touch</h3>
+        <p>&copy; All rights reserved</p>
+        <p>Email: <strong>rasika.weragodaz@gmail.com</strong></p>
+        <!-- <p>Phone: <strong>(+94)11-111-1111</strong></p> -->
+      </footer>
+
+    <!-- Include the JQuery library -->
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/countUp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+   
+    <script>
+        var ctx = document.getElementById('myChart');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    label: '# of COVID-19 cases',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                // scales: {
+                //     yAxes: [{
+                //         ticks: {
+                //             beginAtZero: true
+                //         }
+                //     }]
+                // }
+
+                title: {
+                    display: true,
+                    text: 'Growth of COVID-19 cases in Sri Lanka'
+                }
+            }
+        });
+        </script>
+
+</body>
+</html>

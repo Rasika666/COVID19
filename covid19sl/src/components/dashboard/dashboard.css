@@ -17,9 +17,37 @@ main{
     padding: 2rem 0;
 }
 
+.timer-wapper{
+    padding-top: 2rem;
+}
+
 .local-data{
     /* background-color:red; */
     margin-top: 50px;
+}
+
+.btn-long{
+    margin: 2rem 0;
+    background: #333;
+    box-shadow: 5px 0px 5px rgba(0,0, 0, 0.1), -5px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.link{
+    padding: 1rem 0;
+    color: #eee;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 2rem;
+    display: block;
+}
+
+.link:hover{
+    color: #333;
+}
+
+.btn-long:hover{
+    background:#fff;
+    box-shadow: none;
 }
 
 .globle-data{
