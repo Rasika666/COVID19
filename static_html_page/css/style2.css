@@ -131,9 +131,17 @@ hr {
         width: 40vw;
     }
 
+    .right-wrapper {
+        width: 50vw;
+    }
+
     .data-box{
         width: 20vw;
         margin: 3px 20px;
+        
+    }
+
+    #myChart{
         
     }
 }
