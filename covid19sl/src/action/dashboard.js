@@ -1,4 +1,4 @@
-import {GET_COVID_HPB, GET_SRILANKA_RAPID, GET_WORLD_RAPID} from '../action/type';
+import {GET_COVID_HPB, GET_SRILANKA_RAPID, GET_WORLD_RAPID, GET_GRAPH_RAPID} from '../action/type';
 import {x_rapidapi_host,x_rapidapi_key} from '../CONST';
 
 export const getCOVID_Data = () => dispatch => {
@@ -50,6 +50,26 @@ export const getCovid_worldData_rapidAPI = () => dispatch => {
     .then(
         data => dispatch({
         type : GET_WORLD_RAPID,
+        payload : data
+        })
+    )
+    .catch(err => {
+        console.log(err);
+    });
+}
+
+export const get_graph_rapidAPI = () => dispatch => {
+    fetch("https://coronavirus-monitor.p.rapidapi.com/coronavirus/cases_by_particular_country.php?country=Sri%20Lanka", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
+		"x-rapidapi-key": "7403e9f7f2msh9e1355ba9a10b01p15072ajsn913736268756"
+	}
+    })
+    .then(response => response.json())
+    .then(
+        data => dispatch({
+        type : GET_GRAPH_RAPID,
         payload : data
         })
     )

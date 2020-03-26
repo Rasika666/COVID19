@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../common/common.css'
 import './dashboard.css';
 import DataBox from './DataBox';
 import {connect} from 'react-redux';
@@ -56,7 +57,7 @@ class Dashboard extends Component {
                     </div>
 
                     <div className="btn-long">
-                        <Link className="link" to="/more-SLdata-covid19">More COVID-19 Information in Sri Lanka</Link>
+                        <Link className="link" to="/more-SLdata-covid19">Click for More COVID-19 Information in Sri Lanka</Link>
                     </div>
 
                     <div className="globle-data">
@@ -83,7 +84,7 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
-    // covid_data: PropTypes.object.isRequired,
+    covid_data: PropTypes.object.isRequired,
     getCOVID_Data: PropTypes.func.isRequired
     
 };

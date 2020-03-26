@@ -1,0 +1,135 @@
+/* new  stuff here */
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+}
+
+.left-wrapper {
+    width: 25vw;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+    /* background-color:green; */
+    margin-top: 0.2rem;
+    
+}
+
+.left-boxs,
+.right-boxs{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.right-wrapper {
+    width: 40vw;
+    margin-top: 0.2rem;
+    /* background-color: green; */
+    box-shadow: 5px 0px 5px rgba(0,0, 0, 0.1), -5px 0px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    
+}
+
+.data-box1{
+    width: 10vw;
+    margin: 3px 20px;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 5px 0px 5px rgba(0,0, 0, 0.1), -5px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.number-box1{
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 2rem;
+    z-index: -1;
+}
+.title1{
+    background-color: #fff;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    padding: 1rem 0;
+    padding-bottom: 20px;
+    z-index: 3;
+}
+
+.basic-info{
+    box-shadow: 5px 0px 5px rgba(0,0, 0, 0.1), -5px 0px 5px rgba(0, 0, 0, 0.1);
+    background-color: #333;
+    margin: 1rem;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    line-height: 2rem;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #fff; 
+    width: 90%;
+    margin: auto;
+}
+
+.graph{
+    width:"400"; 
+    height:"280";
+    margin: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .left-wrapper {
+        width: 40vw;
+    }
+
+    .right-wrapper {
+        width: 50vw;
+    }
+
+    .data-box1{
+        width: 20vw;
+        margin: 3px 20px;
+        
+    }
+
+   
+}
+
+@media only screen and (max-width: 767px) {
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 10rem;
+    }
+
+    .left-wrapper {
+        width: 100vw;
+    }
+
+    .data-box1{
+        width: 40vw;
+        margin: 3px 20px;
+        
+    }
+
+    .right-wrapper {
+        width: 100vw;
+        height: 80vh;
+    }
+    .basic-info{
+        position: relative;
+        bottom: 145%;
+        display: block;
+        width: 92vw;
+    }
+
+}
+
+
+
+/* new stuff ends here */
