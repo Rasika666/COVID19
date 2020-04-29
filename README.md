@@ -2,7 +2,7 @@
 create dashboard using Health Promotion Bureau API in Sri Lanka
 
 ## Heroku hosting URL
-[https://covid19sl.herokuapp.com/index.html](https://covid19sl.herokuapp.com/index.html)
+[https://covid2019sl.herokuapp.com/index.html](https://covid2019sl.herokuapp.com/index.html)
 
-# Still Developing the React project
+# React project is upto data and host
 
